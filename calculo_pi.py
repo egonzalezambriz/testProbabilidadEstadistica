@@ -2,6 +2,7 @@
 # Estimacion de PI a traves de un metodo estocastico
 
 # importar librerias
+
 import random
 import math
 from estadisticas import desviacion_estandar, media
@@ -44,10 +45,12 @@ def estimacion (numero_agujas, numero_de_intentos) :
 
 
 ###################################################################
-def estimar_pi (precision, numero_de_intentos, numero_agujas) :
+def estimar_pi (precision, numero_de_intentos) :
 ###################################################################
 
+    numero_agujas = 1000
     sigma = precision
+
     while sigma >= precision / 1.96 :    # para el 99.5% de confiabilidad en una distribucion normal
         media, sigma = estimacion (numero_agujas, numero_de_intentos)
         numero_agujas = numero_agujas * 2
@@ -57,5 +60,5 @@ def estimar_pi (precision, numero_de_intentos, numero_agujas) :
 
 
 if __name__ == '__main__' :
-    estimar_pi (0.002, 300, 1000)     # Al revisar los resultados de las iteraciones es importante notar que sigma va disminuyendo
+    estimar_pi (0.002, 300)     # Al revisar los resultados de las iteraciones es importante notar que sigma va disminuyendo
 
