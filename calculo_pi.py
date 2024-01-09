@@ -1,29 +1,28 @@
 # Estimacion de PI a traves de un metodo estocastico
 
-# Importar librerias
+# importar librerias
 import random
 import math
 from estadisticas import desviacion_estandar, media
 
 
 ###################################################################
-def aventar_agujas (numero_de_agujas) :
+def aventar_agujas (numero_agujas) :
 ###################################################################
     dentro_del_circulo = 0
 
-    for _ in range (numero_de_agujas) :
-        # se generan numeros aleatorios entre -1 y 1 para 'x' y 'y'
+    for _ in range (numero_agujas) :
+
+        # numeros aleatorios entre -1 y 1
         x = random.random() * random.choice ([-1, 1])
         y = random.random() * random.choice ([-1, 1])
- 
-        # se mide la deistancia del centro del circulo al punto
+        
+        # calcular distancia del centro del circulo hacia el punto generado
         distancia_desde_el_centro = math.sqrt (x**2 + y**2)
-
-        # se verifica que se trata de un puto dentro del circulo
         if (distancia_desde_el_centro <= 1) :
             dentro_del_circulo = dentro_del_circulo + 1
 
-    return (4 * dentro_del_circulo) /  numero_de_agujas
+    return (4 * dentro_del_circulo) /  numero_agujas
 
 
 
