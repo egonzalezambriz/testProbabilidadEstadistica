@@ -1,4 +1,3 @@
-
 # Estimacion de PI a traves de un metodo estocastico
 
 # importar librerias
