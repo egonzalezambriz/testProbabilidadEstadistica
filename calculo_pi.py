@@ -28,11 +28,11 @@ def aventar_agujas (numero_agujas) :
 
 
 ###################################################################
-def estimacion (numero_agujas, numero_de_intentos) :
+def estimacion (numero_agujas, numero_intentos) :
 ###################################################################
 
     estimados = []
-    for _ in range (numero_de_intentos) :
+    for _ in range (numero_intentos) :
         porcentaje_agujas_dentro_del_circulo = aventar_agujas (numero_agujas)
         estimados.append (porcentaje_agujas_dentro_del_circulo)
         media_estimados = media (estimados)
@@ -44,13 +44,13 @@ def estimacion (numero_agujas, numero_de_intentos) :
 
 
 ###################################################################
-def estimar_pi (precision, numero_de_intentos, numero_agujas) :
+def estimar_pi (precision, numero_intentos, numero_agujas) :
 ###################################################################
 
     sigma = precision
 
     while sigma >= precision / 1.96 :    # para el 99.5% de confiabilidad en una distribucion normal
-        media, sigma = estimacion (numero_agujas, numero_de_intentos)
+        media, sigma = estimacion (numero_agujas, numero_intentos)
         numero_agujas = numero_agujas * 2
 
     return (media)
