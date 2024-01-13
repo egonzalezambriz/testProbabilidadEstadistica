@@ -57,5 +57,7 @@ def estimar_pi (precision, numero_intentos, numero_agujas) :
 
 
 if __name__ == '__main__' :
-    estimar_pi (0.002, 300, 1000)     # Al revisar los resultados de las iteraciones es importante notar que sigma va disminuyendo
+    # Al revisar los resultados de las iteraciones es importante notar que sigma va disminuyendo
+    estimar_pi (0.002, 300, 1000)
+    estimar_pi (0.001, 200, 500)     
 
