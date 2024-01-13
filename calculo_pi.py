@@ -1,7 +1,6 @@
 # Estimacion de PI a traves de un metodo estocastico
 
 # importar librerias
-
 import random
 import math
 from estadisticas import desviacion_estandar, media
